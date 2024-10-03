@@ -65,21 +65,27 @@
       }
       .settings
       {
-        color: white;
-        background-color: rgba(0, 0, 0, 0.97);
+        color: rgba(255, 255, 255, 0);
+        background-color: rgba(0, 0, 0, 0);
         backdrop-filter: blur(5px);
-        height: 800px;
+        height: 700px;
         display: flex;
         flex-wrap: wrap;
         width: 210px;
-        transform: translateX(-0%);
+        transform: translateY(-4%);
         z-index: -1;
-        transform:  translateY(-15%);
+        position: absolute;
+        top: 20px;
         justify-content: center;
         font-family: monospace;
       }
 
+
+      .settings input{background-color: transparent;border-color: transparent;  }
+
       h1{font-family: monospace;}
+
+a{text-decoration: none;}
 
 
 
@@ -111,11 +117,28 @@
 function Settings()
 {
 
-
-            j++
-            if(j %2==0){  document.querySelector('.settings').style.transform = "translateY(-130px)";document.querySelector('.rockPaperScissor').style.transform = "translateY(-120px)";}
-          else{  document.querySelector('.settings').style.transform = "translateY(+920px)";
+    j++
+            if(j %2==0)
+            {
+                  document.querySelector('.settings').style.zIndex = "1";
+            document.querySelector('.settings').style.backgroundColor = "black";
+            document.querySelector('.settings').style.color = "white";
+            document.querySelector('#background-image').style.backgroundColor = "white";
+            document.querySelector('#background-image').style.borderColor = "black";
+            document.querySelector('.joy').style.color = "white";
+            document.getElementById('background-image').setAttribute("placeholder","type in an image adress for background image...");
         }
+          else
+          { 
+             document.querySelector('.settings').style.zIndex = "-1"; 
+          document.querySelector('.settings').style.backgroundColor = "transparent";
+          document.querySelector('.settings').style.color = "transparent";
+          document.querySelector('#background-image').style.backgroundColor = "transparent";
+          document.querySelector('#background-image').style.borderColor = "transparent";
+          document.querySelector('.joy').style.color = "transparent";
+          document.getElementById('background-image').setAttribute("placeholder","");
+        }
+          
         
 
 
@@ -234,7 +257,7 @@ let clicks =0;
 <div class="settings">
    <h1>settings</h1>   
    <input id="background-image" type="url" onchange="SetBackground();" placeholder="type in an image adress for background image..." style="height: 20px;position:absolute;top:+100px">
-   <a href="C:\Users\shash\Downloads\Search.html" download >HTML DOCUMENT DOWNLOAD FOR MORE PERSONALIZATION</a>
+   <a href="https://github.com/shaboy20/Cool_homemage/blob/main/Search.html" class="joy" >Github repo for the code of this page</a>
 </div>
     <script>
 
