@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.cdnfonts.com/css/anurati" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Shashbos home</title>
+    <style>
+        body label{ font-family: 'Anurati', sans-serif; }
+        body{
+            text-align: center;
+            overflow: hidden;
+        }
+        form {
+            transform: translateY(+500%);
+        }
+        .links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;  
+            gap: 10px;
+            background-color: rgba(176, 172, 172, 0.557);
+            width: 650px;
+            height: 50px;
+            text-align: center;
+            padding: 10px;
+            transform: translateY(+860%);
+            border-radius: 8px;
+            translate: +70%;
+        }
+        .links a:hover { transform: translateY(-7%); }
+        #search {
+            background-color: rgba(173, 173, 173, 0.772);
+            backdrop-filter: blur(10px);
+            height: 50px;
+            width: 500px;
+            font-size: 30px;
+            resize: both;
+            border-radius: 5px;
+            border-color: transparent 5px solid;
+            transform: translateY(-1000%);
+            transition: transform 0.5s;
+        }
+        input:placeholder-shown { color: black; }
+        .rockPaperScissor {
+            width: 210px;
+            background-color: rgba(128, 128, 128, 0.427);
+            backdrop-filter: blur(5px);
+            margin: 0 auto; 
+            position: absolute; 
+            cursor: move; 
+            transform: translateY(-20%); 
+            transition: transform 2s; 
+        }
+        .rockPaperScissor img {
+            margin: 10px; 
+        }
+        img {
+            border-radius: 8px;
+        }
+      #_MI_d0e1d2bb3d300a15043e8671abe1bf21
+      {
+
+        transform: translateY(-0%);
+
+      }
+      .settings
+      {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.97);
+        backdrop-filter: blur(5px);
+        height: 800px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 210px;
+        transform: translateX(-0%);
+        z-index: -1;
+        transform:  translateY(-15%);
+        justify-content: center;
+        font-family: monospace;
+      }
+
+      h1{font-family: monospace;}
+
+
+
+    </style>
+</head>
+<body id="body" style="background-image: url(https://4kwallpapers.com/images/wallpapers/macos-monterey-wwdc-21-stock-dark-mode-5k-4480x2520-5585.jpg);background-size: cover;background-repeat: no-repeat;">
+    <form action="https://www.google.com/search" method="GET">
+        <input id="search" type="search" name="q" placeholder="Search Google...">
+
+    </form>
+    
+
+    <div class="links">
+        <a href="https://www.youtube.com/" target="_blank"><img src="https://static-00.iconduck.com/assets.00/youtube-icon-2048x2048-oa03jx3h.png" width="50px" height="50px"></a>
+        <a href="gmail.com" target="_blank"><img src="https://i.pinimg.com/originals/88/e1/4c/88e14cc7e7fcbb0e0e09de26cec86c61.png" width="50px" height="50px"></a>
+        <button onclick="ShowSearch();" target="_blank" style="background-color: transparent;border-color: transparent;"><img src="https://static.vecteezy.com/system/resources/previews/015/337/677/original/transparent-search-icon-free-png.png" height="40px" width="40px"></button>
+        <a href="https://discord.com/" target="_blank"><img src="https://www.svgrepo.com/show/349338/discord.svg" width="50px" height="50px"></a>
+        <a href="https://www.amazon.in/" target="_blank"><img src="https://www.citypng.com/public/uploads/preview/square-amazon-app-logo-icon-701751695133387c8mdvsejvz.png" width="50px" height="50px"></a>
+        <button onclick="Show();" style="border-radius: 8px;background-color: transparent;border-color: transparent;"><img src="https://www.svgrepo.com/show/334995/widget.svg" width="50px" height="50px" style="border-radius: 8px;"></button>
+        <button onclick="Settings();" style="background-color: transparent;border-color: transparent;"><img src="data:image/png;base64,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" width="50px" height="50px"></button>
+        <form action="https://chatgpt.com/" method="GET" style="transform: translateY(-2px);">
+            <input id="askChat" type="search" name="q" placeholder="Ask something to chatgpt" style="border-radius: 8px;background-color: rgba(240, 248, 255, 0.454);backdrop-filter: blur(10px);border-color: transparent;">
+        </form>
+    </div>
+    <script>
+        let i=0;
+        let j=0;
+
+function Settings()
+{
+
+
+            j++
+            if(j %2==0){  document.querySelector('.settings').style.transform = "translateY(-130px)";document.querySelector('.rockPaperScissor').style.transform = "translateY(-120px)";}
+          else{  document.querySelector('.settings').style.transform = "translateY(+920px)";
+        }
+        
+
+
+}
+
+
+        function ShowSearch() {
+            const searchBar = document.getElementById('search');
+            i++;
+
+            if (i %2 == 0) {
+                searchBar.style.transform = "translateY(0)";
+                searchBar.focus();
+            } else {
+                searchBar.style.transform = "translateY(-1000%)";
+
+            }
+
+            searchBar.value = '';
+        }
+let clicks =0;
+        function Show() {
+            clicks++
+            if(clicks %2==0){  document.querySelector('.rockPaperScissor').style.transform = "translateY(+50px)";document.querySelector('.rockPaperScissor').style.transform = "translateY(-120px)";}
+          else{  document.querySelector('.rockPaperScissor').style.transform = "translateY(-920px)";
+        }
+        }
+
+     
+          
+
+
+      
+    </script>
+    <div class="rockPaperScissor" draggable="true">
+        <h1 style="font-weight: bolder; font-family: monospace; color: aqua;">Rock, Paper, Scissor</h1>
+        <br>
+        <div class="images" style="display: flex; flex-direction: row; gap: 10px;">
+            <img src="https://www.svgrepo.com/show/407352/rock.svg" width="50px" height="50px">
+            <img src="https://images.all-free-download.com/images/graphiclarge/paper_clip_art_7488.jpg" width="50px" height="50px">
+            <img src="https://www.svgrepo.com/show/30549/scissors.svg" width="50px" height="50px">
+        </div>
+        <br>
+        <div class="content">
+            <label style="color: aqua; font-family: monospace;">Enter rock, paper or scissor</label>
+            <br>
+            <input id="choice" onchange="Play();">
+            <p id="hi"></p>
+            <p id="gyat"></p>
+            <p id="ohio"></p>
+            <button id="btn" onclick="Question();">Play again</button>
+            <br>
+            <br>
+
+        </div>
+        <script>
+            let num = Math.floor(Math.random() * 3) + 1;
+            let computer;
+            function Question(){
+                location.reload();
+            }
+            function Play(){
+                let userChoice = document.getElementById('choice').value.toUpperCase();
+                console.log(num); 
+
+                switch(num) {
+                    case 1:
+                        computer = "ROCK";
+                        break;
+                    case 2:
+                        computer = "PAPER";
+                        break;
+                    case 3:
+                        computer = "SCISSOR";
+                        break;
+                }
+                document.getElementById('hi').textContent = userChoice;
+                document.getElementById('gyat').textContent = computer;
+                console.log(computer);
+                switch(userChoice) {
+                    case "ROCK":
+                        if(computer == "ROCK") {
+                            document.getElementById('ohio').textContent = "it's a draw";
+                        } else if(computer == "PAPER") {
+                            document.getElementById('ohio').textContent = "you lose";
+                        } else {
+                            document.getElementById('ohio').textContent = "you win";
+                        }
+                        break;
+                    case "PAPER":
+                        if(computer == "ROCK") {
+                            document.getElementById('ohio').textContent = "you win";
+                        } else if(computer == "PAPER") {
+                            document.getElementById('ohio').textContent = "it's a draw";
+                        } else {
+                            document.getElementById('ohio').textContent = "you lose";
+                        }
+                        break;
+                    case "SCISSOR":
+                        if(computer == "ROCK") {
+                            document.getElementById('ohio').textContent = "you lose";
+                        } else if(computer == "PAPER") {
+                            document.getElementById('ohio').textContent = "you win";
+                        } else {
+                            document.getElementById('ohio').textContent = "it's a draw";
+                        }
+                        break;
+                }
+
+                document.getElementById('btn').style.color = "aqua";
+                document.getElementById('btn').style.backgroundColor = "blue";
+            }
+        </script>
+           <div id="_MI_d0e1d2bb3d300a15043e8671abe1bf21"><a href="https://meteotrend.com/">Weather Forecast</a></div> <script type='text/javascript'>(function(d,w,t,k){function l(){if(typeof(w._MIOB_)=='undefined'){w._MIOB_={};}var m=w._MIOB_[t]=k;var s=d.createElement('script');m.p=('https:'==d.location.protocol?'https:':'http:');s.type='text/javascript';s.async=true;s.src=m.p+'//info.meteotrend.com/mt/'+m.t+'.js';d.body.appendChild(s);}if(d.readyState=='complete')l();else{if(w.attachEvent)w.attachEvent('onload',l);else w.addEventListener('load',l,false);}})(document,window,'d0e1d2bb3d300a15043e8671abe1bf21',{t:'4x6',sw:{"pname":1,"ccond":1,"ccdesc":1,"dayblock":1,"tblank":1},css:['{p}//info.meteotrend.com/mt/{t}.css','{p}//info.meteotrend.com/cs/75fe7f2a8b8b244661549e1c9d2953b6f9271f78.css'],source:'meteotrend'});</script>
+    </div>
+<div class="settings">
+   <h1>settings</h1>   
+   <input id="background-image" type="url" onchange="SetBackground();" placeholder="type in an image adress for background image..." style="height: 20px;position:absolute;top:+100px">
+   <a href="C:\Users\shash\Downloads\Search.html" download >HTML DOCUMENT DOWNLOAD FOR MORE PERSONALIZATION</a>
+</div>
+    <script>
+
+    function SetBackground()
+    {
+        const backgroundImageUrl=document.getElementById('background-image').value;
+        document.getElementById('body').style.backgroundImage =`url(${backgroundImageUrl})`;
+    }
+
+    </script>
+</body>
+</html>
